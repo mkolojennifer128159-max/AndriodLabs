@@ -1,42 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center_vertical">
+    tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Explicit Intent Example"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginBottom="24dp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enter a message to send to the second activity:"
-        android:textSize="16sp"
-        android:layout_marginBottom="8dp" />
+        android:text="Result Here"
+        android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/messageInput"
+        android:id="@+id/m_e_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Type your message"
-        android:inputType="textCapSentences|textMultiLine"
-        android:minLines="2"
-        android:gravity="top|start"
-        android:padding="12dp"
-        android:layout_marginBottom="16dp" />
+        android:gravity="center"
+        android:hint="Name"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/m_e_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Contact"
+        android:textSize="20sp" />
 
     <Button
-        android:id="@+id/openButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Open Second Activity" />
+        android:text="Submit"
+        android:id="@+id/b_submit" />
 
 </LinearLayout>
