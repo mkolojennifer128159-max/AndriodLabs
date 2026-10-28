@@ -1,36 +1,32 @@
-package com.example.explicitintent;
+package com.jm.lab7;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import ...
 
-public class MainActivity extends Activity {
-    private EditText messageInput;
+public class MainActivity extends AppCompatActivity {
+
+    // Widget Declaration
+    EditText e_name, e_contact;
+    Button b_design1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        messageInput = findViewById(R.id.messageInput);
-        Button openButton = findViewById(R.id.openButton);
+        // Add References
+        b_design1 = findViewById(R.id.b_design1);
+        e_name = findViewById(R.id.m_e_name);
+        e_contact = findViewById(R.id.m_e_contact);
 
-        openButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String message = messageInput.getText().toString().trim();
+        // Using Listeners
 
-                if (message.isEmpty()) {
-                    message = "Hello from MainActivity!";
-                }
+        b_design1.setOnClickListener(v -> {
+            String name = e_name.getText().toString();
+            String contact = e_contact.getText().toString();
 
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                intent.putExtra("EXTRA_MESSAGE", message);
-                startActivity(intent);
-            }
+            Intent intent = new Intent packageContext: MainActivity.this, design1.class)
+            intent.putExtra name: "name", name);intent.putExtra name: "contact",contact);
+            startActivity(intent)
         });
     }
 }
